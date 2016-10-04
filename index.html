@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+    <!--<script src="js/liveReload.js"></script>-->
+    <script src="js/dataJSON.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <script id="contentItemTemplate" type="text/x-handlebars-template">
+        <img class="img" alt="#" src={{img}}>
+        <ul class="ul-item">
+            <li name="name"><b>Name:&ensp;{{name}}</b></li>
+            <li name="surname"><b>Surname:&ensp;{{surname}}</b></li>
+            <li name="age"><b>Age:&ensp;{{age}}</b></li>
+            <li name="country"><b>Country:&ensp;{{country}}</b></li>
+            <li name="job"><b>Job:&ensp;{{job}}</b></li>
+    </script>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="wrapp-contact">
+                <p class="logo">Acceptic</p>
+                <a href="#" class="logo-img"></a>
+                <p class="contact-name-number">
+                    Vysotskyi Vladymyr
+                    <br>
+                    <b>(097) 337 46 97</b>
+                </p>
+            </div>
+        </header>
+            <div class="app-wrapper">
+              <div class="app-menu">
+                  <div class="menu-buttom1 bottom">
+                      <a href="" class="reg">Registration</a>
+                  </div>
+                  <div class="menu-buttom2 bottom">
+                      <a href=""  class="log">Log in</a>
+                  </div>
+              </div>
+        <aside class="app-aside">
+            <div class="form-registration hidden">
+                <form class="myform">
+
+                    <div class="inpblock">
+                        <input class="registration-email" type="text" name="email" placeholder="email" autocomplete="off" />
+                        <input class="registration-password" type="password" name="password" placeholder="password" autocomplete="off" />
+                    </div>
+                    <button id="btRegistration" class="button-form" type="submit">Registration</button>
+                </form>
+            </div>
+            <div class="form-log-in hidden">
+                <form class="myform">
+
+                    <div class="inpblock">
+                        <input class="log-in-email" type="text" name="email" placeholder="email" autocomplete="off" />
+                        <input class="log-in-password" type="password" name="password" placeholder="password" autocomplete="off" />
+                    </div>
+
+                    <button id="btlog" class="button-form" type="submit">Log in</button>
+                </form>
+            </div>
+
+            <div class="info"></div>
+
+            <div id="editForm" class="hidden">
+                <form id="edit" class="edit myform">
+                    <div class="inpblock">
+                        <input id="imgs" class="input imgs" type="text" name="img" placeholder="URL image"></td>
+                        <input id="name" class="input name" type="text" name="name" placeholder="Name"></td>
+                        <input id="surname" class="input surname" type="text" name="surname" placeholder="Surname"></td>
+                        <input id="age" class="input age" type="text" name="age" placeholder="Age"></td>
+                        <input id="country" class="input country" type="text" name="Country" placeholder="Country"></td>
+                        <input id="job" class="input job" type="text" name="job" placeholder="Job"></td>
+                    </div>
+                    <button id="change" class="button-form" type="button">Change</button>
+
+                </form>
+            </div>
+        </aside>
+        <main class="app-main">
+            <div id="content" class="hidden"></div>
+        </main>
+           </div>
+       <footer class="app-footer"></footer>
+        
+    </div>
+		</body>
+</html>
